@@ -45,8 +45,6 @@ namespace kutuphane
                         stokAdet[adt] = stokAdet[adt] + ifAdet;
                         Console.WriteLine("Stok güncellenmiştir! Stok: " + stokAdet[adt]);
 
-                        Console.WriteLine("Başka bir işlem yapmak istiyor musunuz? E - H");
-                        kararTekrar = Console.ReadLine();
                         Console.WriteLine("Başka işlem Yapmak istiyor musunuz? E - H");
                         kararTekrar = Console.ReadLine();
                         if (kararTekrar == "E") { Console.Clear(); }
@@ -72,12 +70,17 @@ namespace kutuphane
                         yazarAdi.Add(yazarAd);
                         yayinYili.Add(yayinYil);
                         stokAdet.Add(adet);
-                        Console.WriteLine("Kitap ekleme başarılı! Başka bir işlem yapmak istiyor musunuz? E - H");
+                        Console.WriteLine("Başka işlem Yapmak istiyor musunuz? E - H");
                         kararTekrar = Console.ReadLine();
-                        if (kararTekrar == "E") { }
+                        if (kararTekrar == "E") { Console.Clear(); }
                         else if (kararTekrar == "H")
                         {
                             break;
+                        }
+                        else
+                        {
+                            Console.Clear();
+                            Console.WriteLine("Geçerli bir değer giremediniz.");
                         }
 
                     }
