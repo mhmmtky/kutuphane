@@ -47,15 +47,17 @@ namespace kutuphane
 
                         Console.WriteLine("Başka bir işlem yapmak istiyor musunuz? E - H");
                         kararTekrar = Console.ReadLine();
-                        if (kararTekrar == "E") { }
+                        Console.WriteLine("Başka işlem Yapmak istiyor musunuz? E - H");
+                        kararTekrar = Console.ReadLine();
+                        if (kararTekrar == "E") { Console.Clear(); }
                         else if (kararTekrar == "H")
                         {
                             break;
                         }
                         else
                         {
-                            Console.WriteLine("Geçerli seçim yapamadınız.");
-                            System.Threading.Thread.Sleep(2000);
+                            Console.Clear();
+                            Console.WriteLine("Geçerli bir değer giremediniz.");
                         }
                     }
                     else
@@ -105,7 +107,7 @@ namespace kutuphane
                         tarih.Add(iadeTarihi);
 
                         int bedel = gun[secim - 1] * 5;
-                        Console.WriteLine("Kiralama bedeli: " + bedel + ". Bütçeniz ne kadar?");
+                        Console.WriteLine("Kiralama bedeli: " + bedel + "TL. Bütçeniz ne kadar?");
                         int butce = Convert.ToInt32(Console.ReadLine());
                         if (butce < bedel)
                         {
@@ -129,7 +131,7 @@ namespace kutuphane
                                 kararTekrar = Console.ReadLine();
                                 if (kararTekrar == "E") { Console.Clear(); }
                                 else if (kararTekrar == "H") { break; }
-                                else { Console.WriteLine("Geçerli bir değer giremediniz."); Console.Clear(); }
+                                else { Console.Clear(); Console.WriteLine("Geçerli bir değer giremediniz.");  }
                             }
                         }
                     }
