@@ -127,9 +127,9 @@ namespace kutuphane
                                 kiraKitap.Add(kitapAdi[secim - 1]);
                                 Console.WriteLine("Başka bir işlem yapmak istiyor musunuz? E - H");
                                 kararTekrar = Console.ReadLine();
-                                if (kararTekrar == "E") { }
+                                if (kararTekrar == "E") { Console.Clear(); }
                                 else if (kararTekrar == "H") { break; }
-                                else { Console.WriteLine("Geçerli bir değer giremediniz."); }
+                                else { Console.WriteLine("Geçerli bir değer giremediniz."); Console.Clear(); }
                             }
                         }
                     }
@@ -146,10 +146,12 @@ namespace kutuphane
                         isim.RemoveAt(index);
                         kiraKitap.RemoveAt(index);
                         tarih.RemoveAt(index);
+                        Console.Clear();
                         Console.WriteLine("İade başarılı!");
                     }
                     else
                     {
+                        Console.Clear();
                         Console.WriteLine("Kitap ismini yanlış girdiniz. Tekrar deneyiniz...");
                         Console.WriteLine();
                     }
@@ -200,11 +202,12 @@ namespace kutuphane
                         }
                         Console.WriteLine("Başka işlem Yapmak istiyor musunuz? E - H");
                         kararTekrar = Console.ReadLine();
-                        if (kararTekrar == "E") { }
+                        if (kararTekrar == "E") { Console.Clear(); }
                         else if (kararTekrar == "H") { break;
                         }
                         else {
-                            Console.WriteLine("Geçerli bir değer giremediniz.");
+                            Console.Clear();
+                            Console.WriteLine("Geçerli bir değer giremediniz."); 
                         }
 
                     }
@@ -250,13 +253,14 @@ namespace kutuphane
                         else { Console.WriteLine("Yazar bulunamadı!"); }
                         Console.WriteLine("Başka işlem Yapmak istiyor musunuz? E - H");
                         kararTekrar = Console.ReadLine();
-                        if (kararTekrar == "E") { }
+                        if (kararTekrar == "E") { Console.Clear(); }
                         else if (kararTekrar == "H")
                         {
-                            break;
+                            break; 
                         }
                         else
                         {
+                            Console.Clear();
                             Console.WriteLine("Geçerli bir değer giremediniz.");
                         }
                         
@@ -272,6 +276,7 @@ namespace kutuphane
                     Console.WriteLine("Hangi işlemi yapmak istersiniz?");
                     Console.WriteLine("a) Tüm kitapları listele"); Console.WriteLine("b) Belirli bir yazara ait tüm kitapları listele"); Console.WriteLine("c) Belirli bir yayın yılına ait tüm kitapları listele"); Console.WriteLine("d) Kiradaki kitapları görüntüle");
                     kararTekrar = Console.ReadLine();
+                    Console.Clear();
                     if (kararTekrar == "a")
                     {
                         // Kitap Listeleme
@@ -297,9 +302,9 @@ namespace kutuphane
                         Console.WriteLine();
                         Console.WriteLine("Başka bir işlem yapmak istiyor musun? E - H");
                         kararTekrar = Console.ReadLine();
-                        if (kararTekrar == "E") { }
+                        if (kararTekrar == "E") { Console.Clear(); }
                         else if (kararTekrar == "H") { break; }
-                        else Console.WriteLine("Geçerli bir değer giremediniz.");
+                        else Console.Clear(); Console.WriteLine("Geçerli bir değer giremediniz.");
                     }
                     else if (kararTekrar == "b")
                     {
@@ -322,26 +327,28 @@ namespace kutuphane
                             }
                             Console.WriteLine("Başka işlem Yapmak istiyor musunuz? E - H");
                             kararTekrar = Console.ReadLine();
-                            if (kararTekrar == "E") { }
+                            if (kararTekrar == "E") { Console.Clear(); }
                             else if (kararTekrar == "H")
                             {
                                 break;
                             }
                             else
                             {
+                                Console.Clear();
                                 Console.WriteLine("Geçerli bir değer giremediniz.");
                             }
                         }
                         else { Console.WriteLine("Yazar bulunamadı!");
                             Console.WriteLine("Başka işlem Yapmak istiyor musunuz? E - H");
                             kararTekrar = Console.ReadLine();
-                            if (kararTekrar == "E") { }
+                            if (kararTekrar == "E") { Console.Clear(); }
                             else if (kararTekrar == "H")
                             {
                                 break;
                             }
                             else
                             {
+                                Console.Clear();
                                 Console.WriteLine("Geçerli bir değer giremediniz.");
                             }
                         }
@@ -368,13 +375,14 @@ namespace kutuphane
                             }
                             Console.WriteLine("Başka işlem Yapmak istiyor musunuz? E - H");
                             kararTekrar = Console.ReadLine();
-                            if (kararTekrar == "E") { }
+                            if (kararTekrar == "E") { Console.Clear(); }
                             else if (kararTekrar == "H")
                             {
                                 break;
                             }
                             else
                             {
+                                Console.Clear();
                                 Console.WriteLine("Geçerli bir değer giremediniz.");
                             }
                         }
@@ -383,13 +391,14 @@ namespace kutuphane
                             Console.WriteLine("Yazar bulunamadı!");
                             Console.WriteLine("Başka işlem Yapmak istiyor musunuz? E - H");
                             kararTekrar = Console.ReadLine();
-                            if (kararTekrar == "E") { }
+                            if (kararTekrar == "E") { Console.Clear(); }
                             else if (kararTekrar == "H")
                             {
                                 break;
                             }
                             else
                             {
+                                Console.Clear();
                                 Console.WriteLine("Geçerli bir değer giremediniz.");
                             }
                         }
@@ -412,6 +421,18 @@ namespace kutuphane
                             Console.Write("İade tarihi: "+i+"  ||  ");
                         }
                         Console.WriteLine();
+                        Console.WriteLine("Başka işlem Yapmak istiyor musunuz? E - H");
+                        kararTekrar = Console.ReadLine();
+                        if (kararTekrar == "E") { Console.Clear(); }
+                        else if (kararTekrar == "H")
+                        {
+                            break;
+                        }
+                        else
+                        {
+                            Console.Clear();
+                            Console.WriteLine("Geçerli bir değer giremediniz.");
+                        }
                     }
                 }
                 else if (karar == 6)
